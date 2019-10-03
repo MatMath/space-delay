@@ -38,6 +38,7 @@ export default function({project}) {
 
   return (
   <div>
+    <h1>{project.cie}: {project.descriptions}</h1>
     <h2>{project.name} overun {project.overEstimate} % ({project.overRunMonth} month) from initial estimate of {project.initialMonth} months</h2>
     <Chart
       width={'100%'}

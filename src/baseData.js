@@ -77,7 +77,7 @@ export const BFR = () => {
   return {
     id: 'BFR',
     name: 'BFR',
-    descriptions: 'SpaceX BFR Rocket Dev cycle',
+    descriptions: 'BFR Rocket Dev cycle',
     cie: 'SpaceX',
     ...generateDate(news),
     news,
@@ -120,7 +120,7 @@ export const FH = () => {
   return {
     id: 'FR',
     name: 'Falcon heavy',
-    descriptions: 'SpaceX Falcon heavy Rocket Dev cycle',
+    descriptions: 'Falcon heavy Rocket Dev cycle',
     cie: 'SpaceX',
     ...generateDate(news),
     news,
@@ -163,7 +163,7 @@ export const SLS = () => {
   return {
     id: 'SLS',
     name: 'SLS',
-    descriptions: 'Space/Single Launch System',
+    descriptions: 'Space Launch System',
     cie: 'NASA',
     ...generateDate(news),
     news,
@@ -210,6 +210,69 @@ export const JWT = () => {
     name: 'JWT',
     descriptions: 'James Webb Space Telescope',
     cie: 'NASA',
+    ...generateDate(news),
+    news,
+  }
+};
+
+export const crewDragon = () => {
+  const news = [
+    {
+      id: 'First',
+      dependency: null,
+      miniDesc: 'Won contract for Dragon',
+      eventDate: '2014-09-16',
+      expectedDelivery: '2017-01-02',
+      url: 'https://www.nasa.gov/press/2014/september/nasa-chooses-american-companies-to-transport-us-astronauts-to-international',
+      descriptions: '...launching our astronauts from U.S. soil on American spacecraft and ending the nation’s sole reliance on Russia by 2017',
+      type: 'Info',
+    },
+    {
+      id: 'DragonFly',
+      dependency: null,
+      miniDesc: 'Central core Fire',
+      eventDate: '2015-10-01',
+      expectedDelivery: '2015-11-24',
+      url: 'https://en.wikipedia.org/wiki/Falcon_Heavy',
+      descriptions: 'Hover test of the DragonFly',
+      type: 'Milestone',
+    },
+    {
+      id: 'uncrew',
+      dependency: null,
+      miniDesc: 'Uncrew Orbital flight',
+      eventDate: '2015-10-02',
+      expectedDelivery: '2019-03-02',
+      url: 'https://en.wikipedia.org/wiki/Falcon_Heavy',
+      descriptions: 'First launch',
+      type: 'Milestone',
+    },
+    {
+      id: 'boom',
+      dependency: 'uncrew',
+      miniDesc: 'Explosion during testing',
+      eventDate: '2019-04-02',
+      expectedDelivery: '2019-11-15',
+      url: 'https://en.wikipedia.org/wiki/Falcon_Heavy',
+      descriptions: 'Delay to',
+      type: 'Delay',
+    },
+    {
+      id: 'escape',
+      dependency: 'boom',
+      miniDesc: 'In-flight abort test (IFAT)',
+      eventDate: '2019-10-02',
+      expectedDelivery: '2019-12-17',
+      url: 'https://en.wikipedia.org/wiki/Falcon_Heavy',
+      descriptions: 'Delay to',
+      type: 'Delay',
+    }
+  ];
+  return {
+    id: 'Dragon',
+    name: 'Crew Dragon',
+    descriptions: 'Crew dragon Dev cycle to first astronauts to ISS',
+    cie: 'SpaceX',
     ...generateDate(news),
     news,
   }
