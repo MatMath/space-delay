@@ -48,7 +48,7 @@ export default function({project}) {
   <div>
     <h1>{project.name} overun {overEstimate} % ({overRunMonth} month) from initial estimate of {initialMonth} months</h1>
     <Chart
-      width={'95%'}
+      width={'100%'}
       height={`${55*project.news.length}px`}
       chartType="Gantt"
       loader={<div>Loading Chart</div>}

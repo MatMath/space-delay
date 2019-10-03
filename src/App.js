@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { BFR, FH, SLS } from './baseData';
+import { BFR, FH, SLS, JWT } from './baseData';
 
 import GanttChart from './gantChart';
 
@@ -15,6 +15,8 @@ function App() {
       <GanttChart project={BFR}></GanttChart>
       <br />
       <GanttChart project={SLS}></GanttChart>
+      <br />
+      <GanttChart project={JWT}></GanttChart>
       <div><h2>Details</h2></div>
     </div>
   );

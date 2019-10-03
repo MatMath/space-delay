@@ -126,13 +126,63 @@ export const SLS = {
   },
   {
     id: 'SLS',
-    dependency: null,
+    dependency: 'CP',
     miniDesc: 'Cancel CP for SLS',
     eventDate: '2011-09-02',
     expectedDelivery: '2017-05-02',
     url: 'https://en.wikipedia.org/wiki/Space_Launch_System',
     descriptions: 'Initial SLS proposition',
+    type: 'Delayed',
+  },
+  {
+    id: 'delay',
+    dependency: 'SLS',
+    miniDesc: 'Block 2 Advance Boosters',
+    eventDate: '2019-06-02',
+    expectedDelivery: '2021-09-02',
+    url: 'https://www.theverge.com/2019/6/19/18691230/nasa-space-launch-system-orion-artemis-moon-human-exploration',
+    descriptions: 'More Delay',
     type: 'Info',
+  }
+  ]
+};
+
+
+export const JWT = {
+  id: 'JWT',
+  name: 'JWT',
+  descriptions: 'James Webb Space Telescope',
+  cie: 'NASA',
+  news: [
+  {
+    id: 'JWT',
+    dependency: null,
+    miniDesc: 'Constellation Program unveil',
+    eventDate: '1997-01-02',
+    expectedDelivery: '2007-01-02',
+    url: 'https://en.wikipedia.org/wiki/James_Webb_Space_Telescope',
+    descriptions: '',
+    type: 'Info',
+  },
+  {
+    id: 'Design',
+    dependency: 'JWT',
+    miniDesc: 'Preliminary Design Review',
+    eventDate: '2008-01-02',
+    expectedDelivery: '2014-01-02',
+    url: 'https://en.wikipedia.org/wiki/James_Webb_Space_Telescope',
+    descriptions: 'Update of the Design',
+    type: 'Design',
+  },
+  {
+    id: 'Review',
+    dependency: 'Design',
+    miniDesc: 'Critical Design Review',
+    eventDate: '2018-04-27',
+    expectedDelivery: '2021-01-02',
+    url: 'https://en.wikipedia.org/wiki/James_Webb_Space_Telescope',
+    descriptions: 'Critical Design Review',
+    type: 'Design',
   }
   ]
 };
