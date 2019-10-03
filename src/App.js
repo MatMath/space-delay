@@ -1,24 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { BFR, FH, SLS } from './baseData';
+
+import GanttChart from './gantChart';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Project Delay in space</h1>
+      <div><h2>Graph</h2></div>
+      <GanttChart project={FH}></GanttChart>
+      <br />
+      <GanttChart project={BFR}></GanttChart>
+      <br />
+      <GanttChart project={SLS}></GanttChart>
+      <div><h2>Details</h2></div>
     </div>
   );
 }
