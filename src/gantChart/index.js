@@ -36,17 +36,9 @@ export default function({project}) {
     ];
   });
 
-  const startDate = new Date(project.news[0].eventDate);
-  const initialEstimate = new Date(project.news[0].expectedDelivery);
-  const finalEstimate = new Date(project.news[project.news.length - 1].expectedDelivery);
-  const overEstimate = Math.round((finalEstimate - startDate) / (initialEstimate - startDate) * 100) - 100;
-  const overRunMonth = Math.round((finalEstimate - initialEstimate)/1000/60/60/24/30);
-  const initialMonth = Math.round((initialEstimate - startDate)/1000/60/60/24/30);
-  // const options = { colors: ["salmon", "pink"] }; // Color do not seems to work.
-
   return (
   <div>
-    <h1>{project.name} overun {overEstimate} % ({overRunMonth} month) from initial estimate of {initialMonth} months</h1>
+    <h2>{project.name} overun {project.overEstimate} % ({project.overRunMonth} month) from initial estimate of {project.initialMonth} months</h2>
     <Chart
       width={'100%'}
       height={`${55*project.news.length}px`}

@@ -10,16 +10,15 @@ function App() {
   return (
     <div className="App">
       <h1>Project Delay in space</h1>
-      <div><h2>Graph</h2></div>
-      <GanttChart project={FH}></GanttChart>
-      <br />
-      <GanttChart project={BFR}></GanttChart>
-      <br />
-      <GanttChart project={SLS}></GanttChart>
-      <br />
-      <GanttChart project={JWT}></GanttChart>
-      <div><h2>Details</h2></div>
-      {[BFR, FH, SLS, JWT].map(item => (<DetailsInfo project={item} key="item.id"></DetailsInfo>))}
+      {[BFR(), FH(), SLS(), JWT()].map(item => (
+        <div key={item.id}>
+          <GanttChart project={item}></GanttChart>
+          <br />
+          <DetailsInfo project={item}></DetailsInfo>
+          <br />
+          <hr />
+        </div>
+      ))}
     </div>
   );
 }
