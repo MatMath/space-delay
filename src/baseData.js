@@ -52,9 +52,8 @@ export const BFR = {
     eventDate: '2018-12-01',
     expectedDelivery: '2019-04-02',
     url: 'https://en.wikipedia.org/wiki/BFR_(rocket)',
-    descriptions: 'First Hop expected',
+    descriptions: 'First Hop expected, This never flow in that time, it got delay for later in 2019',
     type: 'delayed',
-    note: 'This never flow in that time, it got delay for later in 2019',
   },
   {
     id: 'MK1',

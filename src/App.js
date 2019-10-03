@@ -4,6 +4,7 @@ import './App.css';
 import { BFR, FH, SLS, JWT } from './baseData';
 
 import GanttChart from './gantChart';
+import DetailsInfo from './detailsInfo';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <br />
       <GanttChart project={JWT}></GanttChart>
       <div><h2>Details</h2></div>
+      {[BFR, FH, SLS, JWT].map(item => (<DetailsInfo project={item} key="item.id"></DetailsInfo>))}
     </div>
   );
 }
